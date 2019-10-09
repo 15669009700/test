@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li class="red">前端</li>
+    <li class="green">java</li>
+    <li class="blue">javascript</li>
+    <li>c++</li>
+</ul>
+<script>
+    var javali = document.querySelector(".green")
+    //querySelector获取绿色li标签
+    console.log(javali);
+    var liAll = document.querySelectorAll("li")
+    //querySelectorAll获取所有li标签
+   // console.log(liAll);
+    var l = document.querySelectorAll("li")[2]
+    //querySelectorAll("li")[2]获取li数组中第三个li标签
+    console.log(l)
+</script>
+</body>
+</html>

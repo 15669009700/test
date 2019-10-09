@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="src/css/formcss.css"/>
+</head>
+<body>
+<!--<progress max="100" value="100"></progress>-->
+<!--<meter max="100" min="0" high="80" low="50" value="30"></meter>-->
+
+<!--表单总结-->
+<form>
+  <fieldset>
+    <legend>学生档案</legend>
+    <label for="uresName">姓名：</label>
+    <input type="text" name="userName" placeholder="请输入用户名" id="uresName">
+    <label for="phone">手机号：</label>
+    <input type="tel" name="userPhone" placeholder="请输入手机号" id="phone" required pattern="^(\+86)?1\d{10}$s">
+    <label for="email">邮箱地址：</label>
+    <input type="email" name="email" id="email">
+    <label for="school">所属院校：</label>
+    <input type="text" id="school" placeholder="请选择" required list="cList">
+    <datalist id="cList">
+      <option value="浙江师范"></option>
+      <option value="浙江理工"></option>
+      <option value="浙江美术学院"></option>
+      <option value="浙江大学"></option>
+    </datalist>
+    <label for="score">入学成绩：</label>
+    <input type="number" max="100" min="0" value="50" placeholder="0" id="score">
+    <label>基础水平：</label>
+    <meter id="level" type="number" max="100" min="0" low="59" high="90"></meter>
+    <label for="inTime">入学日期：</label>
+    <input type="date" value="年/月/日" id="inTime">
+    <label for="leaveTime">毕业日期：</label>
+    <input type="date" value="年/月/日" id="leaveTime">
+    <input type="submit" value="提交">
+  </fieldset>
+</form>
+<script>
+  document.getElementById("score").oninput=function(){
+    document.getElementById("level").value=this.value;
+  }
+</script>
+</body>
+</html>
